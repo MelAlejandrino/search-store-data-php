@@ -1,10 +1,6 @@
 <?php
  
- // servername => localhost
- // username => root
- // password => empty
- // database name => staff
- $conn = mysqli_connect("localhost", "root", "", "");
+ $conn = mysqli_connect("localhost", "root", "", "staff");
   
  // Check connection
  if($conn === false){
@@ -15,8 +11,8 @@
  // Taking all 5 values from the form data(input)
 
 
-// sql to delete a record
-$sql = "DELETE FROM  WHERE id=". $_REQUEST["bid"];
+$id = $_REQUEST["bid"];
+$sql = "DELETE FROM basuras WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";

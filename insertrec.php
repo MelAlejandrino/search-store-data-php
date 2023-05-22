@@ -13,7 +13,7 @@
         // username => root
         // password => empty
         // database name => staff
-        $conn = mysqli_connect("localhost", "root", "", "");
+        $conn = mysqli_connect("localhost", "root", "", "staff");
          
         // Check connection
         if($conn === false){
@@ -28,9 +28,9 @@
         $address =  $_REQUEST['address'];
         $ddate = date('d-m-y H:i:s');
         // Performing insert query execution
-        // here our table name is college
-        $sql = "INSERT INTO   VALUES ('$bid',
-            '$bname','$email','$address','$ddate','$ddate')";
+        // here our table name is college   
+        $sql = "INSERT INTO basuras VALUES ('$bid',
+            '$bname','$address','$email','$ddate','$ddate')";
          
         if(mysqli_query($conn, $sql)){
             echo "<h3>data stored in a database successfully."
