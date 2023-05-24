@@ -55,7 +55,7 @@
         if ($result->num_rows > 0) {
           // output data of each row
           while ($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row["id"] . "</td><td>" . $row["name"] . "</td><td> " . $row["email"] .  "</td><td>" . $row["address"] .   "</td><td><a href=deleterec.php?bid=" . $row["id"] . " class='button text-decoration-none text-white bg-black border p-1 px-2'>Delete </a>  <a href='editrec.php?bid=" . $row["id"] . "&name=" . $row["name"] . "&address=" . $row["address"] . "&email=" . $row["email"] . "&credate=" . $row["created"] . "' class='button text-decoration-none text-white bg-black border p-1 px-2'>EDIT </a>    </td></tr>";
+            echo "<tr><td>" . $row["id"] . "</td><td>" . $row["name"] . "</td><td> " . $row["email"] .  "</td><td>" . $row["address"] .   "</td><td><a href=deleterec.php?bid=" . $row["id"] . " class='button text-decoration-none text-white bg-black border p-1 px-2'>DELETE </a>  <a href='editrec.php?bid=" . $row["id"] . "&name=" . $row["name"] . "&address=" . $row["address"] . "&email=" . $row["email"] . "&credate=" . $row["created"] . "' class='button text-decoration-none text-white bg-black border p-1 px-2'>EDIT </a>    </td></tr>";
           }
         } else {
         }
